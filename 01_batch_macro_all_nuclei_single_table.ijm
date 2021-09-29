@@ -12,12 +12,12 @@ roiManager('reset');
 run("Analyze Particles...", "size=2000-Infinity add");
 count=roiManager('count');
 for(nuc=0;nuc<count;nuc++){
-roiManager('select',nuc);
-run("Enlarge...", "enlarge=-10");
-run("Make Band...", "band=10");
-roiManager("update");
-name=title+"_"+RoiManager.getName(nuc);
-roiManager("rename",name);
+  roiManager('select',nuc);
+  run("Enlarge...", "enlarge=-10");
+  run("Make Band...", "band=10");
+  roiManager("update");
+  name=title+"_"+RoiManager.getName(nuc);
+  roiManager("rename",name);
 }
 selectImage(id);
 Stack.setChannel(2);
